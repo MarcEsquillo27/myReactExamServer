@@ -38,7 +38,9 @@ router.use(express.json());
 if (!fs.existsSync('uploads')) {
   fs.mkdirSync('uploads');
 }
-
+router.get("/api/testApi",async(req,res)=>{
+  res.send("ITS WORLING")
+})
 // INSERT Employee
 router.post("/api/insertEmployee", upload.single('picture'), async (req, res) => {
   req.body.picture = picture_name
