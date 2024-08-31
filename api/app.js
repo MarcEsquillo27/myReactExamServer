@@ -1,6 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const port = 12799
+const port = process.env.PORT || 3000;
 const helmet = require('helmet')
 const employee = require('../routes/employee.js')
 
