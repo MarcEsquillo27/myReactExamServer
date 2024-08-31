@@ -10,6 +10,10 @@ app.use(helmet())
 
 app.use(cors())
  
+app.get('/', (req, res) => {
+    res.send('API is working fine!');
+});
+
 app.use('/employee', employee)
 
  
